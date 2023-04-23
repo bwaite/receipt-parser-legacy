@@ -1,42 +1,19 @@
 [tool.poetry]
-name = "receipt_parser_core"
-
-version = "0.2.5"
-description = "A supermarket receipt parser written in Python using tesseract OCR"
-
-authors = ["Matthias Endler <matthias-endler@gmx.net>", "William Todt <william.todt@mailbox.org>", "Linus Dietz <me@linusdietz.eu>" ]
-license = "Apache-2.0"
-
-homepage = "https://github.com/ReceiptManager/receipt-parser-legacy"
-repository = "https://github.com/ReceiptManager/receipt-parser-legacy"
-
-keywords = ["receipt", "ocr", "parser"]
-
+name = "receipt-parser"
+version = "0.1.0"
+description = ""
+authors = ["Bryan Waite <bryanwaite@gmail.com>"]
+license = "Apache License"
 readme = "README.md"
 
-[tool.poetry.build]
-generate-setup-file = false
-
 [tool.poetry.dependencies]
-python = "3.9.13"
-pyyaml = ">=5.3.1,<7.0.0"
-python-dateutil = "^2.8.1"
-Pillow = "^8.1.2"
-py = "^1.10.0"
-wand = "^0.6.3"
-pytesseract = "^0.3.6"
-terminaltables = "^3.1.0"
-numpy = "^1.19.4"
-opencv-python = "^4.4.0"
-scipy = "^1.6.2" 
+python = ">=3.11,<3.12"
+opencv-python = "^4.7.0.72"
+numpy = "^1.24.3"
+pytesseract = "^0.3.10"
+scipy = "^1.10.1"
 
-[tool.poetry.dev-dependencies]
-pytest = "^7.0.0"
-black = {version = "^22.6", allow-prereleases = true}
-
-[tool.poetry.scripts]
-run = 'receipt_parser_core:main'
 
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
